@@ -1,0 +1,26 @@
+---
+import Image from 'astro/components/Image.astro';
+import PageHeading from '../components/PageHeading.astro';
+import Layout from './Layout.astro'
+const { frontmatter } = Astro.props;
+---
+<Layout title='Blog'>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        <img 
+            src={frontmatter.image.url} 
+            width="1920" height="1280" 
+            alt={frontmatter.image.alt} 
+            class="w-full" 
+        />
+        <div>
+            <PageHeading title={frontmatter.title} />
+            <p class="text-zinc-500 mb-3">{frontmatter.description}</p>
+            <div class="flex flex-wrap gap-2 mb-1">
+                {frontmatter.techStack.map((tech: string) => (
+                    <img src={`/tech-icons/${tech}.svg`} alt={tech} height="32" width="32" />
+                ))}
+            </div>
+        </div>
+    </div>
+    <slot />
+</Layout>
