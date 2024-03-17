@@ -20,7 +20,7 @@ allProjects = allProjects.sort((a, b) => new Date(b.data.date).getTime() - new D
                     <p class="text-sm text-zinc-400 mb-3">{project.data.description}</p>
                     <div class="flex flex-wrap gap-1">
                         {project.data.techStack.map((tech: string) => (
-                            <Image src={`/tech-icons/${tech}.svg`} alt={tech} loading="lazy" height="24" width="24" />
+                            <Image src={`/tech-icons/${tech}.svg`} alt={tech} loading="eager" height="24" width="24" />
                         ))}
                     </div>
                 </div>
