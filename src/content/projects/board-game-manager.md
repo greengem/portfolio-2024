@@ -7,7 +7,7 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 previewUrl: 'https://fit-forge.app'
 gitHubUrl: 'https://github.com/greengem/fit-forge'
-techStack: ["next", "typescript", "openai", "prisma", "database", "clerk", "recharts", "framer", "tailwind"]
+techStack: ["next", "typescript", "prisma", "database", "tailwind"]
 date: '2024-02-15'
 ---
 # My First Blog Post
