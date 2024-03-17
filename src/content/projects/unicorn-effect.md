@@ -5,8 +5,7 @@ image:
     url: '/project-images/unicorn-effect.webp'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
-previewUrl: 'https://fit-forge.app'
-gitHubUrl: 'https://github.com/greengem/fit-forge'
+gitHubUrl: 'https://github.com/greengem/ripple-effect-image-generator'
 techStack: ["vite", "react", "typescript", "tailwind"]
 date: '2024-03-16'
 ---

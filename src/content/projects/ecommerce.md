@@ -5,8 +5,7 @@ image:
     url: '/project-images/next-board.webp'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
-previewUrl: 'https://nextjs-kanban-psi.vercel.app'
-gitHubUrl: 'https://github.com/greengem/nextjs-kanban'
+gitHubUrl: 'https://github.com/greengem/nextjs-ecommerce'
 techStack: ["next", "typescript", "prisma", "supabase", "next-auth", "framer", "tailwind"]
 date: '2024-03-18'
 ---

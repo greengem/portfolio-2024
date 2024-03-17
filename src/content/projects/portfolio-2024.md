@@ -5,8 +5,7 @@ image:
     url: '/project-images/portfolio-2023.webp'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
-previewUrl: 'https://nextjs-kanban-psi.vercel.app'
-gitHubUrl: 'https://github.com/greengem/cwaitt.dev'
+gitHubUrl: 'https://github.com/greengem/portfolio-2024'
 techStack: ["astro", "typescript", "tailwind"]
 date: '2024-03-20'
 ---
