@@ -10,7 +10,7 @@ const projectCollection = defineCollection({
         alt: z.string()
       }),
       gitHubUrl: z.string(),
-      previewUrl: z.string(),
+      previewUrl: z.string().optional(),
       tags: z.array(z.string()),
       techStack: z.array(z.string()),
     }),
