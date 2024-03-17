@@ -1,6 +1,6 @@
 ---
 title: 'AI Chat'
-description: 'Full Stack Board Game Organiser'
+description: 'OpenAI ChatGPT Wrapper'
 image:
     url: '/project-images/fit-forge.webp'
     alt: 'The full Astro logo.'
