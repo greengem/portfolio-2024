@@ -13,20 +13,14 @@ allProjects = allProjects.sort((a, b) => new Date(b.data.date).getTime() - new D
         {allProjects.map((project) => (
             <div>
                 <a href={`/projects/${project.slug}`}>
-				    <Image src={project.data.image.url} width={1920} height={1440} alt={project.data.title} />
+				    <Image src={project.data.image.url} width={1920} height={1440} alt={project.data.title} loading="eager" />
                 </a>
                 <div class="px-5 py-3 bg-zinc-900">
-                    <h2 class="truncate font-semibold mb-1">{project.data.title}</h2>
-                    <p class="text-sm text-zinc-400">{project.data.description}</p>
-                    <div class="text-pink-500 text-sm mb-2">
-                        <a href={`/projects/${project.slug}`}>Details</a>
-                        <a href={project.data.previewUrl} target="_blank" rel="noopener noreferrer">Demo</a>
-                        <a href={project.data.gitHubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
+                    <h2 class="truncate font-semibold">{project.data.title}</h2>
+                    <p class="text-sm text-zinc-400 mb-3">{project.data.description}</p>
                     <div class="flex flex-wrap gap-1">
-                        
                         {project.data.techStack.map((tech: string) => (
-                            <img src={`/tech-icons/${tech}.svg`} alt={tech} />
+                            <Image src={`/tech-icons/${tech}.svg`} alt={tech} loading="lazy" height="24" width="24" />
                         ))}
                     </div>
                 </div>
