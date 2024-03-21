@@ -25,9 +25,10 @@ const { title, slug, image, description, techStack, previewUrl, gitHubUrl } = As
 		<p class="text-sm mb-2 text-ctp-subtext0">{description}</p>
 		<div class="flex flex-wrap gap-1">
 			{techStack.map((tech: string) => (
-				<Icon name={tech} size={24} class="stroke-red-500" />
+				<Icon name={tech} size={24} class="stroke-red-500 text-red-500" />
 			))}
 		</div>
+
 		<div class="gap-1 hidden">
 			{previewUrl &&
 				<a href={previewUrl} class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-2">
