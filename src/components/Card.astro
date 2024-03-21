@@ -21,23 +21,23 @@ const { title, slug, image, description, techStack, previewUrl, gitHubUrl } = As
 		<Image src={image} width={1920} height={1440} alt={title} loading="eager" />
 	</a>
 	<div class="p-4">
-		<div class="truncate font-semibold leading-none">{title}</div>
+		<div class="truncate leading-snug">{title}</div>
 		<p class="text-sm mb-2 text-ctp-subtext0">{description}</p>
 		<div class="flex flex-wrap gap-1">
 			{techStack.map((tech: string) => (
-				<Icon name={tech} size={24} class="stroke-ctp-blue" />
+				<Icon name={tech} size={22} class="text-ctp-mauve" />
 			))}
 		</div>
 
 		<div class="gap-1 hidden">
 			{previewUrl &&
 				<a href={previewUrl} class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-2">
-					<Icon name="app-window" size={24} class="stroke-ctp-blue" />
+					<Icon name="app-window" size={24} class="text-ctp-blue" />
 				</a>
 			}
 			{gitHubUrl &&
 				<a href={gitHubUrl} class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-4">
-					<Icon name="code" size={24} class="stroke-ctp-blue" />
+					<Icon name="code" size={24} class="text-ctp-blue" />
 				</a>
 			}
 		</div>
