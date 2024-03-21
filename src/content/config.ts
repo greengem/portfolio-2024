@@ -13,6 +13,7 @@ const projectCollection = defineCollection({
       previewUrl: z.string().optional(),
       tags: z.array(z.string()),
       techStack: z.array(z.string()),
+      isExperimental: z.boolean().optional(),
     }),
   });
 
