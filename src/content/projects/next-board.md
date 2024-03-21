@@ -1,6 +1,6 @@
 ---
 title: 'NextBoard'
-description: 'Full Stack Trello Clone'
+description: 'Full stack Trello clone'
 image:
     url: '/project-images/next-board.webp'
     alt: 'The full Astro logo.'
