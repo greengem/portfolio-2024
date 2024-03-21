@@ -1,9 +1,12 @@
-<nav class="bg-zinc-900 text-white px-5 flex justify-between">
+---
+import { Icon } from 'astro-icon/components';
+---
+<nav class="bg-ctp-crust px-5 flex justify-between">
   <a class="flex gap-3 py-4" href="/">
-    <img src="/tech-icons/chef-hat.svg" width="20" height="20" alt="Chef Hat Icon" />
-    <span>cwaitt.dev</span>
+    <Icon name="api-app" size={24} />
+    <span>Chris Waitt | Full Stack Developer Portfolio</span>
   </a>
-  <ul class="flex gap-3">
+  <ul class="flex gap-3 text-sm">
     <li><a class="inline-block py-4" href="/about">About</a></li>
     <li><a class="inline-block py-4" href="/contact">Contact</a></li>
   </ul>
