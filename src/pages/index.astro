@@ -1,30 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import Card from '../components/Card.astro';
+import GridProjects from '../components/GridProjects.astro';
 
 let allProjects = await getCollection('projects');
 
 allProjects = allProjects.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Separate projects into normal and experimental
+const normalProjects = allProjects.filter(project => !project.data.isExperimental);
+const experimentalProjects = allProjects.filter(project => project.data.isExperimental);
 ---
 
 <Layout title="Home">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-3">
-        {allProjects.map((project) => (
-            <div>
-                <a href={`/projects/${project.slug}`}>
-				    <Image src={project.data.image.url} width={1920} height={1440} alt={project.data.title} loading="eager" />
-                </a>
-                <div class="px-5 py-3 bg-zinc-900">
-                    <h2 class="truncate font-semibold">{project.data.title}</h2>
-                    <p class="text-sm text-zinc-400 mb-3">{project.data.description}</p>
-                    <div class="flex flex-wrap gap-1">
-                        {project.data.techStack.map((tech: string) => (
-                            <Image src={`/tech-icons/${tech}.svg`} alt={tech} loading="eager" height="24" width="24" />
-                        ))}
-                    </div>
-                </div>
-            </div>
+
+    <GridProjects title="Professional Projects" >
+        {normalProjects.map((project) => (
+            <Card 
+                title={project.data.title} 
+                slug={project.slug} 
+                image={project.data.image.url} 
+                description={project.data.description} 
+                techStack={project.data.techStack}
+                previewUrl={project.data.previewUrl} 
+                gitHubUrl={project.data.gitHubUrl}
+            />
         ))}
-    </div>
+    </GridProjects>
+
+    <GridProjects title="Experimental & Conceptual Works">
+        {experimentalProjects.map((project) => (
+            <Card 
+                title={project.data.title} 
+                slug={project.slug} 
+                image={project.data.image.url} 
+                description={project.data.description} 
+                techStack={project.data.techStack} 
+                previewUrl={project.data.previewUrl} 
+                gitHubUrl={project.data.gitHubUrl}
+            />
+        ))}
+    </GridProjects>
+
 </Layout>
