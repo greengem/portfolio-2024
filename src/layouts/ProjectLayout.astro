@@ -19,12 +19,13 @@ const { frontmatter } = Astro.props;
             <p class="text-ctp-subtext0 mb-3">{frontmatter.description}</p>
             <div class="flex flex-wrap gap-2 mb-1">
                 {frontmatter.techStack.map((tech: string) => (
-                    <Icon name={tech} size={28} />
+                    <Icon name={tech} size={28} class="stroke-ctp-blue" />
                 ))}
             </div>
             <slot />
         </div>
     </div>
+    
     <div>
         <h2 class="text-xl font-light mb-3">Screenshots</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
