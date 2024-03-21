@@ -2,6 +2,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import Navbar from '../components/Navbar.astro';
+import { AstroFont } from "astro-font";
 
 interface Props {
 	title: string;
@@ -11,7 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="ctp-latte dark:ctp-mocha">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -19,11 +20,25 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<AstroFont
+			config={[
+				{
+				src: [],
+				name: "Poppins",
+				// Google Fonts URL
+				googleFontsURL: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,700&display=swap',
+				preload: true,
+				display: "swap",
+				selector: "body",
+				fallback: "sans-serif",
+				},
+			]}
+		/>
 		<ViewTransitions />
 	</head>
-	<body class="min-h-dvh flex flex-col grow">
+	<body class="min-h-dvh flex flex-col grow bg-ctp-base text-ctp-text">
 		<Navbar />
-		<main class="flex flex-col grow p-5 bg-zinc-950 text-white">
+		<main class="flex flex-col grow p-5">
 			<!-- <PageHeading title={title} /> -->
 			<slot />
 		</main>
