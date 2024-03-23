@@ -1,9 +1,7 @@
 ---
 title: 'NextBoard'
 description: 'Full stack Trello clone'
-image:
-    url: '/project-images/next-board.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/next-board.webp'
 tags: ["astro", "blogging", "learning in public"]
 previewUrl: 'https://nextjs-kanban-psi.vercel.app'
 gitHubUrl: 'https://github.com/greengem/nextjs-kanban'

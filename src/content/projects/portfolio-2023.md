@@ -1,9 +1,7 @@
 ---
 title: '2023 Portfolio'
 description: 'Last years portfolio'
-image:
-    url: '/project-images/portfolio-2023.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/portfolio-2023.webp'
 tags: ["astro", "blogging", "learning in public"]
 gitHubUrl: 'https://github.com/greengem/cwaitt.dev'
 techStack: ["next", "typescript", "framer", "sass", "tailwind"]

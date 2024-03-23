@@ -1,9 +1,7 @@
 ---
 title: 'Expense Tracker'
 description: 'Native expense tracker'
-image:
-    url: '/project-images/fit-forge.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/fit-forge.webp'
 tags: ["astro", "blogging", "learning in public"]
 previewUrl: 'https://fit-forge.app'
 gitHubUrl: 'https://github.com/greengem/fit-forge'

@@ -1,9 +1,7 @@
 ---
 title: 'Unicorn Effect Generator'
 description: 'B2B app for image manipulation'
-image:
-    url: '/project-images/unicorn-effect.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/unicorn-effect.webp'
 tags: ["astro", "blogging", "learning in public"]
 gitHubUrl: 'https://github.com/greengem/ripple-effect-image-generator'
 techStack: ["vite", "react", "typescript", "tailwind"]

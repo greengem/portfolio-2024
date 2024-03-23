@@ -1,9 +1,7 @@
 ---
 title: 'Solar System'
 description: 'Interactive Solar System'
-image:
-    url: '/project-images/solar-system.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/solar-system.webp'
 tags: ["astro", "blogging", "learning in public"]
 previewUrl: 'https://threejs-solar-system-eta.vercel.app'
 gitHubUrl: 'https://github.com/greengem/threejs-solar-system'

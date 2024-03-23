@@ -1,9 +1,7 @@
 ---
 title: 'DRG Deep Dives'
 description: 'Display weekly game info from API'
-image:
-    url: '/project-images/drg.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/drg.webp'
 tags: ["astro", "blogging", "learning in public"]
 previewUrl: 'https://weather-app-v1-react.vercel.app'
 gitHubUrl: 'https://github.com/greengem/weather-app-v1-react'

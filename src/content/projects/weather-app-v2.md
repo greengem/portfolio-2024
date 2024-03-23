@@ -1,9 +1,7 @@
 ---
 title: 'Weather App V2'
 description: 'Simple weather app'
-image:
-    url: '/project-images/weather-app-v2.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/weather-app-v2.webp'
 tags: ["astro", "blogging", "learning in public"]
 previewUrl: 'https://weather-app-v2-vite.vercel.app'
 gitHubUrl: 'https://github.com/greengem/weather-app-v2-vite'

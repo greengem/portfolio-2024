@@ -1,9 +1,7 @@
 ---
 title: 'Full Stack Ecommerce'
 description: 'An ecommerce template for Next.js'
-image:
-    url: '/project-images/ecommerce.webp'
-    alt: 'The full Astro logo.'
+imagePath: '/src/images/project/ecommerce.webp'
 tags: ["astro", "blogging", "learning in public"]
 gitHubUrl: 'https://github.com/greengem/nextjs-ecommerce'
 techStack: ["next", "typescript", "prisma", "supabase", "next-auth", "framer", "tailwind", "radix"]
