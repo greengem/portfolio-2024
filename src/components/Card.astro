@@ -11,18 +11,20 @@ interface Props {
 	techStack: string[];
 	previewUrl?: string;
 	gitHubUrl?: string;
-
+	isExperimental?: boolean;
 }
 
-const { title, slug, imagePath, description, techStack, previewUrl, gitHubUrl } = Astro.props;
+const { title, slug, imagePath, description, techStack, previewUrl, gitHubUrl, isExperimental } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/project/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/project/*.{jpeg,jpg,png,gif,webp}"`);
 ---
 
-<div class="bg-ctp-surface0 rounded-md overflow-hidden shadow-md">
+<div class="bg-ctp-surface0 rounded-md overflow-hidden shadow-md relative">
 	<a href={`/projects/${slug}`}>
 		<Image src={images[imagePath]()} alt={title} />
+		 <span class="absolute top-3 right-3 text-red text-xl">{isExperimental && <Icon name='flask' />}</span>
 	</a>
+
 	<div class="p-4">
 		<div class="truncate leading-snug">{title}</div>
 		<p class="text-sm mb-2 text-ctp-subtext0">{description}</p>
