@@ -6,15 +6,15 @@ import { Icon } from 'astro-icon/components';
 const { frontmatter } = Astro.props;
 ---
 <Layout title='Blog'>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
         <Image 
-            src={frontmatter.image.url} 
+            src={frontmatter.imagePath} 
             width="1920" height="1280" 
-            alt={frontmatter.image.alt} 
-            class="w-full rounded-md shadow-md" 
+            alt={frontmatter.title} 
+            class="w-full rounded-md shadow-md col-span-1" 
             loading="eager"
         />
-        <div>
+        <div class="col-span-2">
             <PageHeading title={frontmatter.title} />
             <p class="text-ctp-subtext0 mb-3">{frontmatter.description}</p>
             <div class="flex flex-wrap gap-2 mb-1">
