@@ -16,6 +16,21 @@ const experimentalProjects = allProjects.filter(project => project.data.isExperi
 <Layout title="Home">
 
     <GridProjects title="Professional Projects" >
+        {allProjects.map((project) => (
+            <Card 
+                title={project.data.title} 
+                slug={project.slug} 
+                imagePath={project.data.imagePath} 
+                description={project.data.description} 
+                techStack={project.data.techStack}
+                previewUrl={project.data.previewUrl} 
+                gitHubUrl={project.data.gitHubUrl}
+                isExperimental={project.data.isExperimental}
+            />
+        ))}
+    </GridProjects>
+
+    <!-- <GridProjects title="Professional Projects" >
         {normalProjects.map((project) => (
             <Card 
                 title={project.data.title} 
@@ -41,6 +56,6 @@ const experimentalProjects = allProjects.filter(project => project.data.isExperi
                 gitHubUrl={project.data.gitHubUrl}
             />
         ))}
-    </GridProjects>
+    </GridProjects> -->
 
 </Layout>
