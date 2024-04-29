@@ -22,14 +22,7 @@ const { frontmatter } = Astro.props;
                     <Icon name={tech} size={28} class="text-ctp-mauve" />
                 ))}
             </div>
-            <slot />
         </div>
     </div>
-    
-    <div>
-        <h2 class="text-xl font-light mb-3">Screenshots</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-        </div>
-    </div>
+    <slot />
 </Layout>
