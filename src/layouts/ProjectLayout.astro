@@ -22,6 +22,16 @@ const { frontmatter } = Astro.props;
                     <Icon name={tech} size={28} class="text-ctp-mauve" />
                 ))}
             </div>
+            
+            <div class="flex gap-5 mt-5">
+                {frontmatter.previewUrl && (
+                    <a href={frontmatter.previewUrl} target="_blank" rel="noopener noreferrer" class="bg-ctp-mauve text-ctp-crust px-6 py-3 inline-block rounded-md shadow-md hover:shadow-none font-semibold">Live Demo</a>
+                )}
+                {frontmatter.gitHubUrl && (
+                    <a href={frontmatter.gitHubUrl} target="_blank" rel="noopener noreferrer" class="bg-ctp-mauve text-ctp-crust px-6 py-3 inline-block rounded-md shadow-md font-semibold">Github</a>
+                )}
+            </div>
+            
         </div>
     </div>
     <slot />
