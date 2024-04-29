@@ -1,7 +1,7 @@
 ---
-title: 'Mystic Shroom Game'
+title: '3-Day GameJam: Mystic Shroom'
 description: '3D Platform Game in Unreal 5'
-imagePath: '/src/images/project/ai-chat.webp'
+imagePath: '/src/images/project/mystic-shroom.webp'
 tags: ["astro", "blogging", "learning in public"]
 gitHubUrl: 'https://github.com/greengem/MysticShroom'
 techStack: ["game"]
