@@ -8,9 +8,13 @@ export default {
         extend: {},
     },
     plugins: [
-        require("@catppuccin/tailwindcss")({
+      // catppuccin colours
+      require("@catppuccin/tailwindcss")({
           prefix: "ctp",
         //   defaultFlavour: "mocha",
         }),
+
+        // tailwind typography
+        require('@tailwindcss/typography'),
       ],
 }
