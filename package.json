@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
+    "@astrojs/check": "^0.9.2",
     "@astrojs/tailwind": "^5.1.0",
     "@tabler/icons-sprite": "^3.1.0",
-    "astro": "^4.5.4",
-    "astro-font": "^0.0.78",
+    "astro": "^4.10.1",
+    "astro-font": "^0.1.81",
     "astro-icon": "^1.1.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
