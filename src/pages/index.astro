@@ -1,36 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-import Card from '../components/Card.astro';
-import GridProjects from '../components/GridProjects.astro';
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import GridProjects from "../components/GridProjects.astro";
 
-let allProjects = await getCollection('projects');
+let allProjects = await getCollection("projects");
 
-allProjects = allProjects.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+allProjects = allProjects.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 
 // Separate projects into normal and experimental
-const normalProjects = allProjects.filter(project => !project.data.isExperimental);
-const experimentalProjects = allProjects.filter(project => project.data.isExperimental);
+//const normalProjects = allProjects.filter(project => !project.data.isExperimental);
+//const experimentalProjects = allProjects.filter(project => project.data.isExperimental);
 ---
 
 <Layout title="Home">
+  <GridProjects title="Professional Projects">
+    {
+      allProjects.map((project) => (
+        <Card
+          title={project.data.title}
+          slug={project.slug}
+          imagePath={project.data.imagePath}
+          description={project.data.description}
+          techStack={project.data.techStack}
+          previewUrl={project.data.previewUrl}
+          gitHubUrl={project.data.gitHubUrl}
+          isExperimental={project.data.isExperimental}
+        />
+      ))
+    }
+  </GridProjects>
 
-    <GridProjects title="Professional Projects" >
-        {allProjects.map((project) => (
-            <Card 
-                title={project.data.title} 
-                slug={project.slug} 
-                imagePath={project.data.imagePath} 
-                description={project.data.description} 
-                techStack={project.data.techStack}
-                previewUrl={project.data.previewUrl} 
-                gitHubUrl={project.data.gitHubUrl}
-                isExperimental={project.data.isExperimental}
-            />
-        ))}
-    </GridProjects>
-
-    <!-- <GridProjects title="Professional Projects" >
+  <!-- <GridProjects title="Professional Projects" >
         {normalProjects.map((project) => (
             <Card 
                 title={project.data.title} 
@@ -57,5 +60,4 @@ const experimentalProjects = allProjects.filter(project => project.data.isExperi
             />
         ))}
     </GridProjects> -->
-
 </Layout>

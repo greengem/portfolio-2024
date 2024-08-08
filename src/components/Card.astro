@@ -1,50 +1,78 @@
 ---
-import { Image } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
-import { Icon } from 'astro-icon/components';
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { Icon } from "astro-icon/components";
 
 interface Props {
-	title: string;
-	slug: string;
-	imagePath: string;
-	description: string;
-	techStack: string[];
-	previewUrl?: string;
-	gitHubUrl?: string;
-	isExperimental?: boolean;
+  title: string;
+  slug: string;
+  imagePath: string;
+  description: string;
+  techStack: string[];
+  previewUrl?: string;
+  gitHubUrl?: string;
+  isExperimental?: boolean;
 }
 
-const { title, slug, imagePath, description, techStack, previewUrl, gitHubUrl, isExperimental } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/project/*.{jpeg,jpg,png,gif,webp}')
-if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/images/project/*.{jpeg,jpg,png,gif,webp}"`);
+const {
+  title,
+  slug,
+  imagePath,
+  description,
+  techStack,
+  previewUrl,
+  gitHubUrl,
+  isExperimental,
+} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/images/project/*.{jpeg,jpg,png,gif,webp}"
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/images/project/*.{jpeg,jpg,png,gif,webp}"`
+  );
 ---
 
 <div class="bg-ctp-surface0 rounded-md overflow-hidden shadow-md relative">
-	<a href={`/projects/${slug}`}>
-		<Image src={images[imagePath]()} alt={title} />
-		 <span class="absolute top-3 right-3 text-red text-xl">{isExperimental && <Icon name='flask' />}</span>
-	</a>
+  <a href={`/projects/${slug}`}>
+    <Image src={images[imagePath]()} alt={title} />
+    <span class="absolute top-3 right-3 text-red text-xl"
+      >{isExperimental && <Icon name="flask" />}</span
+    >
+  </a>
 
-	<div class="p-4">
-		<div class="truncate leading-snug">{title}</div>
-		<p class="text-sm mb-2 text-ctp-subtext0">{description}</p>
-		<div class="flex flex-wrap gap-1">
-			{techStack.map((tech: string) => (
-				<Icon name={tech} size={22} class="text-ctp-mauve" />
-			))}
-		</div>
+  <div class="p-4">
+    <div class="truncate leading-snug text-xl">{title}</div>
+    <p class="text-sm mb-2 text-ctp-subtext0">{description}</p>
+    <div class="flex flex-wrap gap-1">
+      {
+        techStack.map((tech: string) => (
+          <Icon name={tech} size={22} class="text-ctp-mauve" />
+        ))
+      }
+    </div>
 
-		<div class="gap-1 hidden">
-			{previewUrl &&
-				<a href={previewUrl} class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-2">
-					<Icon name="app-window" size={24} class="text-ctp-blue" />
-				</a>
-			}
-			{gitHubUrl &&
-				<a href={gitHubUrl} class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-4">
-					<Icon name="code" size={24} class="text-ctp-blue" />
-				</a>
-			}
-		</div>
-	</div>
+    <div class="gap-1 hidden">
+      {
+        previewUrl && (
+          <a
+            href={previewUrl}
+            class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-2"
+          >
+            <Icon name="app-window" size={24} class="text-ctp-blue" />
+          </a>
+        )
+      }
+      {
+        gitHubUrl && (
+          <a
+            href={gitHubUrl}
+            class="flex gap-2 items-center bg-ctp-mauve text-black text-xs rounded-md py-2 px-4"
+          >
+            <Icon name="code" size={24} class="text-ctp-blue" />
+          </a>
+        )
+      }
+    </div>
+  </div>
 </div>

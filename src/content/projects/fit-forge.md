@@ -1,13 +1,25 @@
 ---
-title: 'FitForge'
-description: 'Full stack AI workout manager'
-imagePath: '/src/images/project/fit-forge.webp'
+title: "FitForge"
+description: "Full stack AI workout manager"
+imagePath: "/src/images/project/fit-forge.webp"
 tags: ["astro", "blogging", "learning in public"]
-previewUrl: 'https://fit-forge.app'
-gitHubUrl: 'https://github.com/greengem/fit-forge'
-techStack: ["next", "typescript", "openai", "prisma", "database", "clerk", "recharts", "framer", "tailwind"]
-date: '2024-03-14'
+previewUrl: "https://fit-forge.app"
+gitHubUrl: "https://github.com/greengem/fit-forge"
+techStack:
+  [
+    "next",
+    "typescript",
+    "openai",
+    "prisma",
+    "database",
+    "clerk",
+    "recharts",
+    "framer",
+    "tailwind",
+  ]
+date: "2024-03-14"
 ---
+
 ## Introduction: The Spark of Inspiration
 
 After bringing my portfolio to life with Next.js, I found myself pondering, "What's next?" As a developer with a knack for solving problems and a background in PHP, I was itching to dive deeper into Next.js's rich features, such as authentication, database operations, CRUD functionalities, and API integrations. The moment of inspiration struck unexpectedly through my dissatisfaction with a poorly designed workout app. Driven by a blend of personal frustration and a desire to create something meaningful for others, I embarked on a journey to develop a comprehensive workout manager. This project wasn't just another item on my portfolio; it became a labour of love.
@@ -23,7 +35,7 @@ ClerkAuth: Anyone who’s worked on auth knows it’s a rabbit hole. Clerk was m
 
 ![Exercises page](/assets/images/tux.png)
 
-The idea was to create an engaging and interactive exercise module. I sourced an extensive open-source database for exercises, which I integrated with PostgreSQL, enabling customization on the fly. My initial approach involved static generation for rapid loading times, but I soon realized the need for more dynamism and interactivity. Implementing server-side rendering (SSR) allowed for shareable views, bookmarkable filtered results, and a personalized user experience with features like favourite exercises, history logs, and charts. 
+The idea was to create an engaging and interactive exercise module. I sourced an extensive open-source database for exercises, which I integrated with PostgreSQL, enabling customization on the fly. My initial approach involved static generation for rapid loading times, but I soon realized the need for more dynamism and interactivity. Implementing server-side rendering (SSR) allowed for shareable views, bookmarkable filtered results, and a personalized user experience with features like favourite exercises, history logs, and charts.
 
 ![Exercises page with filters](/assets/images/tux.png)
 
@@ -124,6 +136,7 @@ export default function ExerciseFilterCategory() {
 ```
 
 ## Enhancing User Experience: Modal Innovations
+
 Addressing the challenge of displaying user data related to exercises, I utilized React's useContext hook to maintain a singular modal element dynamically loaded with content. This not only optimized performance but also enhanced user experience by reducing clutter and loading times. The decision to fetch data within modal tabs using SWR was strategic, ensuring data was fetched and cached efficiently, further boosting the app's responsiveness.
 
 ![Exercise Modal - About Tab](/assets/images/tux.png)
@@ -164,9 +177,6 @@ The dashboard is a testament to the power of advanced SSR, suspense loading, and
 published
 
 ![Dashboard (Responsive)](/assets/images/tux.png)
-
-
-
 
 ## Activity Page and Editing Workouts: Simplifying User Engagement
 
